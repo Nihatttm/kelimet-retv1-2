@@ -1,5 +1,5 @@
 import random
-kelimeler = ["güzel ","bilgi ","sorun","sağlamak ","bırakmak","zaman","su","yapmak","kullanılmak","değil","görmek",
+kelimeler = ["gözəl ","bilgi ","sual","sağlam ","bıraxmaq","zaman","su","yapmak","kullanılmak","değil","görmek",
              "teniden", "çoğu", "fakat", "lira", "oynamak", "çiçek", "şehir", "yükselmek", "mücadele", "varlık", "yapmak",
              "güven", "gerek", "tedavi", "birim", "rahat", "soğuk", "orası", "kitap", "paylaşmak", "hesap", "vücut",
              "toprak", "üzeri", "sistem", "hoş", "çekilmek", "teknik", "yaklaşmak", "yıl", "tarih", "kesin", "abla",

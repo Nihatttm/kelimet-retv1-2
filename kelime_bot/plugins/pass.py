@@ -8,7 +8,7 @@ from kelime_bot import *
 
 
 
-@Client.on_message(filters.command("pass") & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command("pas") & ~filters.private & ~filters.channel)
 async def passs(c:Client, m:Message):
     global oyun
     
@@ -21,7 +21,7 @@ async def passs(c:Client, m:Message):
     if aktif:
         if oyun[m.chat.id]["pass"] < 3:
             oyun[m.chat.id]["pass"] += 1 
-            await c.send_message(m.chat.id,f"❗ Toplam 3 geçiş hakkınız var!\n➡️ Kelime Geçişi çıktı !\n✏️ Doğru kelime : **<code>{oyun[m.chat.id]['kelime']}</code>**")
+            await c.send_message(m.chat.id,f"❗ Cəmi 3 keçid Haqqınız Var!\n➡️ Kəlimə Geçişi Çıxtı !\n✏️ Doğru kəlimə : **<code>{oyun[m.chat.id]['kelime']}</code>**")
             
             oyun[m.chat.id]["kelime"] = kelime_sec()
             oyun[m.chat.id]["aktif"] = True
@@ -35,16 +35,16 @@ async def passs(c:Client, m:Message):
             
             text = f"""
 🎯 Raund : {oyun[m.chat.id]['round']}/60 
-📝 Kelime :   <code>{kelime_list}</code>
-💰 Kazandığınız Puan : 1
+📝 Kəlimə :   <code>{kelime_list}</code>
+💰 Qazanacağınız Xal : 1
 🔎 İ𝗉𝗎𝖼𝗎 : 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 𝖴𝗓𝗎𝗇𝗅uk: {int(len(kelime_list)/2)} 
+✍🏻 Uzunluq: {int(len(kelime_list)/2)} 
 
-✏️ Karışık harflerden doğru kelimeyi bulun
+✏️ Qarışıq hərflərdən düzgün sözü tapın
             """
             await c.send_message(m.chat.id, text)
             
         else:
-            await c.send_message(m.chat.id, f"<code>**❗ Geçiş Doğru Kaydedildi! </code> \n Oyunu durdurmak için yazıp /cancel durdurabilirsiniz✍🏻**")
+            await c.send_message(m.chat.id, f"<code>**❗ Geçiş Düz Saxlanıldı! </code> \n Oyunu diyandırmaq üçün /dayandir yazıb diyandıra Bilərsiniz✍🏻**")
     else:
-        await m.reply(f"❗ **Grubumuzda aktif oyun bulunmamaktadır!\n Yeni bir oyuna başlamak için /game yazabilirsiniz✍🏻**")
+        await m.reply(f"❗ **Qrupunuzda aktif oyun tapılmadı!\n Yeni bir oyuna başlamaq üçün /basla yazabilərsiniz.✍🏻**")

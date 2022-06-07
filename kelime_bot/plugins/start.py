@@ -11,27 +11,33 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 keyboard = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/KelimeHazinesiBot?startgroup=new")
+        InlineKeyboardButton("➕ Qrupa Əlavə Et", url=f"http://t.me/SozTapmacaRobot?startgroup=new")
     ],
     [
-        InlineKeyboardButton("🇹🇷 Sahibim", url="https://t.me/nevarevladim"),
-        InlineKeyboardButton("💬 Chat", url="https://t.me/+0kf_3zSzsCszZWJk"),
+        InlineKeyboardButton("Dev. 🐅", url="https://t.me/vusaliw"),
+        InlineKeyboardButton("Chat 🎉", url="https://t.me/AzeSohbetGurupu"),
     ]
 ])
 
 
 START = """
-**🔮 Merhaba, Kelimeleri tersten bulma oyununa hoş geldin..**
+**• Salam 👋
 
-➤ Bilgi için 👉 /help Tıklayın. Komutlar kolay ve basittir. 
+• Mən Söz Oyun Botuyam 🎮 
+
+• Əyləncəli vaxt Keçirmək üçün Mənimlə Oynaya bilərsən ✍🏻 
+
+• Oynamaq üçün məni bir qrupa əlavə edib adçin etmək lazımdır . 💭**
+
+➤ Bilgi üçün 👉 /komek Tıklayın. Komutlar Asant və Rahatdır. 
 """
 
 HELP = """
 **✌️ Komutlar Menüsüne Hoşgeldiniz.**
-/game - Oyunu başlatmak için..
-/pass - Üç adet hakkınız mevcut, oyunu geçmek için.. 
-/skor - Oyuncular arasındaki rekabet bilgisi..
-/cancel - Oyundan çıkmak için gerekli olan komuttur.. 
+/basla - Oyunu Başladmak için..
+/pas - Cəmi 3 keçid Haqqınız Var.. 
+/reyting - Oyuncular arasındaki Xal bilgisi..
+/dayandir - Oyundan çıxmaq üçün lazımlı olan komutdur.. 
 """
 
 # Komutlar. 
@@ -39,12 +45,12 @@ HELP = """
 async def start(bot, message):
   await message.reply_photo("https://i.ibb.co/K6QTywd/images-17.jpg",caption=START,reply_markup=keyboard)
 
-@Client.on_message(filters.command("help"))
+@Client.on_message(filters.command("komek"))
 async def help(bot, message):
   await message.reply_photo("https://i.ibb.co/K6QTywd/images-17.jpg",caption=HELP) 
 
 # Oyunu başlat. 
-@Client.on_message(filters.command("game")) 
+@Client.on_message(filters.command("basla")) 
 async def kelimeoyun(c:Client, m:Message):
     global oyun
     aktif = False
@@ -55,9 +61,9 @@ async def kelimeoyun(c:Client, m:Message):
         aktif = False
 
     if aktif:
-        await m.reply("**❗ Oyun Zaten Grubunuzda Devam Ediyor ✍🏻 \n Oyunu durdurmak için yazıp /cancel durdurabilirsiniz")
+        await m.reply("**❗ Oyun Qrupunuzda Artıq Davam Edir ✍🏻 \n Oyunu dayandırmaq üçün yazın /dayandir")
     else:
-        await m.reply(f"**{m.from_user.mention}** Tarafından! \nKelime Bulma Oyunu Başladı .\n\nİyi Şanslar !", reply_markup=kanal)
+        await m.reply(f"**{m.from_user.mention}** Tərəfindən! \nKəlimə Tapma Oyunu Başladı .\n\nBol Şanslar !", reply_markup=kanal)
         
         oyun[m.chat.id] = {"kelime":kelime_sec()}
         oyun[m.chat.id]["aktif"] = True
@@ -75,11 +81,11 @@ async def kelimeoyun(c:Client, m:Message):
         text = f"""
 🎯 Raund : {oyun[m.chat.id]['round']}/60 
 📝 Söz :   <code>{kelime_list}</code>
-💰 Kazandığınız Puan: 1
+💰 Qazanacağınız Xal: 1
 🔎 İpucu: 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 Uzunluk : {int(len(kelime_list)/2)} 
+✍🏻 Uzunluq : {int(len(kelime_list)/2)} 
 
-✏️ Karışık harflerden doğru kelimeyi bulun
+✏️ Qarışıq hərflərdən düzgün sözü tapın
         """
         await c.send_message(m.chat.id, text)
         

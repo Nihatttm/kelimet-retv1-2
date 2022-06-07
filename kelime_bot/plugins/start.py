@@ -34,7 +34,7 @@ START = """
 
 HELP = """
 **✌️ Komutlar Menüsüne Hoşgeldiniz.**
-/basla - Oyunu Başladmak için..
+/basla - Oyunu Başladmak üçün..
 /pas - Cəmi 3 keçid Haqqınız Var.. 
 /reyting - Oyuncular arasındaki Xal bilgisi..
 /dayandir - Oyundan çıxmaq üçün lazımlı olan komutdur.. 

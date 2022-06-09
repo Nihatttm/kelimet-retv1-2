@@ -27,7 +27,7 @@ START = """
 
 • Əyləncəli vaxt Keçirmək üçün Mənimlə Oynaya bilərsən ✍🏻 
 
-• Oynamaq üçün məni bir qrupa əlavə edib adçin etmək lazımdır . 💭**
+• Oynamaq üçün məni bir qrupa əlavə edib admin etmək lazımdır . 💭**
 
 ➤ Bilgi üçün 👉 /komek Tıklayın. Komutlar Asant və Rahatdır. 
 """

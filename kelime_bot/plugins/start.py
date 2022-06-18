@@ -33,7 +33,7 @@ START = """
 """
 
 HELP = """
-**✌️ Komutlar Menüsüne Hoşgeldiniz.**
+**✌️ Komutlar Menusuna XoşGəldiniz.**
 /basla - Oyunu Başladmak üçün..
 /pas - Cəmi 3 keçid Haqqınız Var.. 
 /reyting - Oyuncular arasındaki Xal bilgisi..

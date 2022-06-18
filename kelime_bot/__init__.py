@@ -15,10 +15,10 @@ LOGGER = logging.getLogger(__name__)
 
 
 # Hesap
-API_ID = "19832689"
-API_HASH = "a35f2c0d6c4d25456cd01dbe3547f5de"
-TOKEN = "5567094593:AAEc3uTc3XPRkxiw_sHmmIBwKRrqGArFqSE" 
-USERNAME = "SozTapmacaRobot"
+API_ID = "APİ İD YAZ"
+API_HASH = "HASH YAZ"
+TOKEN = "TOKEN YAZ" 
+USERNAME = "BOT KULLANICI ADI @ OLMADAN"
 
 
 
@@ -34,7 +34,7 @@ bot = Client(
     )
 
 
-# Oyun Verileri
+# Oyun Verileri DEPLOYDAKİ USERNAMEYE ÖZ İDVİ YAZ!
 oyun = {}
 
 
@@ -47,5 +47,5 @@ rating = {}
 
 # !!!!!!!!!!!!!! DEĞİŞTİR KESİNLİKLE !!!!!!!!!!!!!!!!
 #      SAHİBİN USER ID'Sİ
-OWNER_ID = 5189923876
+OWNER_ID = SAHİB İD. 
 
